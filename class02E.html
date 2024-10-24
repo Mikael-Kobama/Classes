@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação Personalizada</title>
+</head>
+
+<body>
+    <h1 id="myHeading">Mozilla é legal!</h1>
+    <button id="myButton">Definir Nome</button>
+
+    <script>
+        const myHeading = document.querySelector('#myHeading');
+        const myButton = document.querySelector('#myButton');
+
+        function setUserName() {
+            const myName = prompt("Por favor, digite o seu nome");
+            if (!myName) {
+                setUserName();
+            } else {
+                localStorage.setItem("name", myName);
+                myHeading.textContent = `Mozilla é legal, ${myName}`;
+            }
+        }
+
+        if (!localStorage.getItem("name")) {
+            setUserName();
+        } else {
+            const storedName = localStorage.getItem("name");
+            myHeading.textContent = `Mozilla é legal, ${storedName}`;
+        }
+
+        myButton.onclick = () => {
+            setUserName();
+        };
+
+        (function () {
+  "use strict";
+  /* Ínicio do seu código */
+  function greetMe(seuNome) {
+    alert(`Olá ${seuNome}`);
+  }
+
+  greetMe("Mike");
+  /* Fim do seu código */
+})();
+
+function myFunction() {
+    console.log("A função foi chamada!");
+}
+var myArray = [];
+if (!myArray[0]) myFunction();
+
+console.log(x === undefined); // exibe "true"
+var x = 3;
+
+/**
+ * Exemplo 2
+ */
+// retornará um valor undefined
+var myvar = "my value";
+
+(function () {
+  console.log(myvar); // undefined
+  var myvar = "local value";
+})();
+var meuCarro = new Object();
+meuCarro.fabricacao = "Ford";
+meuCarro.modelo = "Mustang";
+meuCarro.ano = 1969;
+meuCarro.fabricacao = "chevrolet"
+console.log(meuCarro.fabricacao)
+
+var meuObj = new Object(),
+  str = "minhaString",
+  aleat = Math.random(),
+  obj = new Object();
+
+meuObj.tipo = "Sintaxe de ponto";
+meuObj["data de criacao"] = "String com espaco";
+meuObj[str] = "valor de String";
+meuObj[aleat] = "Numero Aleatorio";
+meuObj[obj] = "Objeto";
+meuObj[""] = "Mesmo uma string vazia";
+
+function mostrarProps(obj, nomeDoObj) {
+  var resultado = "";
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
+    }
+  }
+  return resultado;
+}
+console.log(meuObj);
+
+    </script>
+</body>
+
+</html>
