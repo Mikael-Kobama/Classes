@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden; /* Esconder apenas a rolagem horizontal */
+    font-family: 'Arial', sans-serif; /* Define uma fonte mais moderna e legível */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: #E0F7FA; /* Azul claro suave */
+}
+
+button {
+    border: 2px solid #009688; /* Cor de borda mais harmoniosa */
+    width: 150px;
+    height: 40px;
+    background-color: #00796B; /* Verde escuro */
+    cursor: pointer;
+    border-radius: 10px;
+    color: #FFFFFF; /* Texto branco para maior contraste */
+    transition: background-color 0.3s, border-color 0.3s; /* Suave transição de hover */
+    margin: 10px 0; /* Adiciona uma margem vertical de 10px */
+}
+
+button:hover {
+    background-color: #004D40; /* Verde mais escuro ao passar o mouse */
+    border-color: #80CBC4; /* Borda clara ao passar o mouse */
+}
+
+.btn {
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+}
+.c {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid #4DB6AC; /* Bordas de cor suave */
+    border-radius: 12px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: #B2DFDB; /* Fundo suave */
+    color: #004D40; /* Texto escuro para contraste */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave para hover */
+}
+
+.c:hover {
+    border-color: #00796B; /* Borda mais escura ao passar o mouse */
+    background-color: #4DB6AC; /* Fundo levemente mais escuro */
+}
+
+.destaque {
+    background-color: #80CBC4 !important; /* Verde claro para destaque */
+    color: #00332E !important; /* Texto escuro para contraste */
+    border-color: #009688 !important; /* Cor de borda correspondente */
+}
+
+.destaque2 {
+    background-color: #004D40 !important; /* Verde escuro para destaque 2 */
+    color: #E0F7FA !important; /* Texto claro para contraste */
+    border-color: #80CBC4 !important; /* Cor de borda clara */
+}
+
+.caixa {
+    overflow: hidden;
+    border: 4px solid #00897B; /* Bordas consistentes */
+    background-color: #1A237E; /* Azul escuro para fundo */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 100%; /* Ocupar largura total disponível */
+    max-width: 300px; /* Limitar largura máxima */
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .caixa {
+        width: 90%; /* Ajustar a largura em telas menores */
+    }
+}
